@@ -1,0 +1,508 @@
+# INTRO
+
+[[exercises]]
+name = "intro1"
+path = "exercises/intro/intro1.rs"
+mode = "compile"
+hint = """
+Remove the I AM NOT DONE comment to move on to the next exercise."""
+
+[[exercises]]
+name = "intro2"
+path = "exercises/intro/intro2.rs"
+mode = "compile"
+hint = """
+Add an argument after the format string."""
+
+# VARIABLES
+
+[[exercises]]
+name = "variables1"
+path = "exercises/variables/variables1.rs"
+mode = "compile"
+hint = """
+Hint: The declaration on line 12 is missing a keyword that is needed in Rust
+to create a new variable binding."""
+
+[[exercises]]
+name = "variables2"
+path = "exercises/variables/variables2.rs"
+mode = "compile"
+hint = """
+The compiler message is saying that Rust cannot infer the type that the
+variable binding `x` has with what is given here.
+What happens if you annotate line 7 with a type annotation?
+What if you give x a value?
+What if you do both?
+What type should x be, anyway?
+What if x is the same type as 10? What if it's a different type?"""
+
+[[exercises]]
+name = "variables3"
+path = "exercises/variables/variables3.rs"
+mode = "compile"
+hint = """
+In Rust, variable bindings are immutable by default. But here we're trying
+to reassign a different value to x! There's a keyword we can use to make
+a variable binding mutable instead."""
+
+# FUNCTIONS
+
+[[exercises]]
+name = "functions1"
+path = "exercises/functions/functions1.rs"
+mode = "compile"
+hint = """
+This excercise is testing your ability to understand associated functions
+and methods. Have a look at the Rust by example book if you feel stuck!
+The output should print values by calling the associated methods."""
+
+[[exercises]]
+name = "functions2"
+path = "exercises/functions/functions2.rs"
+mode = "compile"
+hint = """
+You'll need to fix a few things and import the Rand crate. Does this imply 
+anything else?"""
+
+# TEST 1
+
+[[exercises]]
+name = "quiz"
+path = "exercises/quiz.rs"
+mode = "test"
+hint = "No hints this time ;)"
+
+# MOVE SEMANTICS
+
+[[exercises]]
+name = "move_semantics1"
+path = "exercises/move_semantics/move_semantics1.rs"
+mode = "compile"
+hint = """
+So you've got the "cannot borrow immutable local variable `vec1` as mutable" error on line 13,
+right? The fix for this is going to be adding one keyword, and the addition is NOT on line 13
+where the error is."""
+
+# PRIMITIVE TYPES
+
+[[exercises]]
+name = "primitive_types3"
+path = "exercises/primitive_types/primitive_types3.rs"
+mode = "test"
+hint = """
+There's a shorthand to initialize Arrays with a certain size that does not
+require you to type in 100 items (but you certainly can if you want!).
+For example, you can do:
+let array = ["Are we there yet?"; 10];
+
+Bonus: what are some other things you could have that would return true
+for `a.len() >= 100`?"""
+
+[[exercises]]
+name = "primitive_types4"
+path = "exercises/primitive_types/primitive_types4.rs"
+mode = "test"
+hint = """
+Take a look at the Understanding Ownership -> Slices -> Other Slices section of the book:
+https://doc.rust-lang.org/book/ch04-03-slices.html
+and use the starting and ending indices of the items in the Array
+that you want to end up in the slice.
+
+If you're curious why the first argument of `assert_eq!` does not
+have an ampersand for a reference since the second argument is a
+reference, take a look at the Deref coercions section of the book:
+https://doc.rust-lang.org/book/ch15-02-deref.html"""
+
+[[exercises]]
+name = "primitive_types5"
+path = "exercises/primitive_types/primitive_types5.rs"
+mode = "compile"
+hint = """
+Take a look at the Data Types -> The Tuple Type section of the book:
+https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
+Particularly the part about destructuring (second to last example in the section).
+You'll need to make a pattern to bind `name` and `age` to the appropriate parts
+of the tuple. You can do it!!"""
+
+[[exercises]]
+name = "primitive_types6"
+path = "exercises/primitive_types/primitive_types6.rs"
+mode = "test"
+hint = """
+While you could use a destructuring `let` for the tuple here, try
+indexing into it instead, as explained in the last example of the
+Data Types -> The Tuple Type section of the book:
+https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
+Now you have another tool in your toolbox!"""
+
+# STANDARD LIBRARY TYPES
+
+[[exercises]]
+name = "iterators1"
+path = "exercises/standard_library_types/iterators1.rs"
+mode = "compile"
+hint = """
+Step 1:
+We need to apply something to the collection `my_fav_things` before we start to go through
+it. What could that be? Take a look at the struct definition for a vector for inspiration:
+https://doc.rust-lang.org/std/vec/struct.Vec.html.
+Step 2 & step 2.1:
+Very similar to the lines above and below. You've got this!
+Step 3:
+An iterator goes through all elements in a collection, but what if we've run out of
+elements? What should we expect here? If you're stuck, take a look at
+https://doc.rust-lang.org/std/iter/trait.Iterator.html for some ideas.
+"""
+
+# STRUCTS
+
+[[exercises]]
+name = "structs1"
+path = "exercises/structs/structs1.rs"
+mode = "test"
+hint = """
+Rust has more than one type of struct. Three actually, all variants are used to package related data together.
+There are normal (or classic) structs. These are named collections of related data stored in fields.
+Tuple structs are basically just named tuples.
+Finally, Unit structs. These don't have any fields and are useful for generics.
+
+In this exercise you need to complete and implement one of each kind.
+Read more about structs in The Book: https://doc.rust-lang.org/book/ch05-01-defining-structs.html"""
+
+[[exercises]]
+name = "structs2"
+path = "exercises/structs/structs2.rs"
+mode = "test"
+hint = """
+Creating instances of structs is easy, all you need to do is assign some values to its fields.
+There are however some shortcuts that can be taken when instantiating structs.
+Have a look in The Book, to find out more: https://doc.rust-lang.org/stable/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax"""
+
+[[exercises]]
+name = "structs3"
+path = "exercises/structs/structs3.rs"
+mode = "test"
+hint = """
+The new method needs to panic if the weight is physically impossible :), how do we do that in Rust?
+
+For is_international: What makes a package international? Seems related to the places it goes through right?
+
+For calculate_transport_fees: Bigger is more expensive usually, we don't have size, but something may fit the bill here :)
+
+Have a look in The Book, to find out more about method implementations: https://doc.rust-lang.org/book/ch05-03-method-syntax.html"""
+
+# ENUMS
+
+[[exercises]]
+name = "event_enums"
+path = "exercises/enums/event_enums.rs"
+mode = "compile"
+hint = """
+Hint: you can create enumerations that have different variants with different types
+such as no data, anonymous structs, a single string, tuples, ...etc"""
+
+[[exercises]]
+name = "enums3"
+path = "exercises/enums/test_enums.rs"
+mode = "test"
+hint = "No hints this time ;)"
+
+# MODULES
+
+[[exercises]]
+name = "modules1"
+path = "exercises/modules/modules1.rs"
+mode = "compile"
+hint = """
+Two hints:
+(1) Everything is private in Rust by default-- but there's a keyword we can use
+to make something public! The compiler error should point to the thing that
+needs to be public.
+
+(2) The delicious_snacks module is trying to present an external interface that is 
+different than its internal structure (the `fruits` and `veggies` modules and
+associated constants). Complete the `use` statements to fit the uses in main and
+find the one keyword missing for both constants."""
+
+[[exercises]]
+name = "modules2"
+path = "exercises/modules/modules2.rs"
+mode = "compile"
+hint = """
+Probably missing something?"""
+
+# ERROR HANDLING
+
+[[exercises]]
+name = "errors1"
+path = "exercises/error_handling/errors1.rs"
+mode = "test"
+hint = """
+`Ok` and `Err` are one of the variants of `Result`, so what the tests are saying
+is that `generate_nametag_text` should return a `Result` instead of an
+`Option`.
+
+To make this change, you'll need to:
+   - update the return type in the function signature to be a Result<String, String> that
+     could be the variants `Ok(String)` and `Err(String)`
+   - change the body of the function to return `Ok(stuff)` where it currently
+     returns `Some(stuff)`
+   - change the body of the function to return `Err(error message)` where it
+     currently returns `None`"""
+
+[[exercises]]
+name = "errors2"
+path = "exercises/error_handling/errors2.rs"
+mode = "test"
+hint = """
+One way to handle this is using a `match` statement on
+`item_quantity.parse::<i32>()` where the cases are `Ok(something)` and
+`Err(something)`. This pattern is very common in Rust, though, so there's
+a `?` operator that does pretty much what you would make that match statement
+do for you! Take a look at this section of the Error Handling chapter:
+https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator
+and give it a try!"""
+
+[[exercises]]
+name = "errors3"
+path = "exercises/error_handling/errors3.rs"
+mode = "compile"
+hint = """
+If other functions can return a `Result`, why shouldn't `main`?"""
+
+[[exercises]]
+name = "errors4"
+path = "exercises/error_handling/errors4.rs"
+mode = "test"
+hint = """
+`PositiveNonzeroInteger::new` is always creating a new instance and returning an `Ok` result.
+It should be doing some checking, returning an `Err` result if those checks fail, and only
+returning an `Ok` result if those checks determine that everything is... okay :)"""
+
+[[exercises]]
+name = "errors5"
+path = "exercises/error_handling/errors5.rs"
+mode = "compile"
+hint = """
+Hint: There are two different possible `Result` types produced within
+`main()`, which are propagated using `?` operators. How do we declare a
+return type from `main()` that allows both?
+
+Another hint: under the hood, the `?` operator calls `From::from`
+on the error value to convert it to a boxed trait object, a
+`Box<dyn error::Error>`, which is polymorphic-- that means that lots of
+different kinds of errors can be returned from the same function because
+all errors act the same since they all implement the `error::Error` trait.
+Check out this section of the book:
+https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator
+
+This exercise uses some concepts that we won't get to until later in the
+course, like `Box` and the `From` trait. It's not important to understand
+them in detail right now, but you can read ahead if you like.
+
+Read more about boxing errors:
+https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html
+
+Read more about using the `?` operator with boxed errors:
+https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html
+"""
+
+[[exercises]]
+name = "errors6"
+path = "exercises/error_handling/errors6.rs"
+mode = "test"
+hint = """
+This exercise uses a completed version of `PositiveNonzeroInteger` from
+errors4.
+
+Below the line that TODO asks you to change, there is an example of using
+the `map_err()` method on a `Result` to transform one type of error into
+another. Try using something similar on the `Result` from `parse()`. You
+might use the `?` operator to return early from the function, or you might
+use a `match` expression, or maybe there's another way!
+
+You can create another function inside `impl ParsePosNonzeroError` to use
+with `map_err()`.
+
+Read more about `map_err()` in the `std::result` documentation:
+https://doc.rust-lang.org/std/result/enum.Result.html#method.map_err"""
+
+# Generics
+
+[[exercises]]
+name = "generics1"
+path = "exercises/generics/generics1.rs"
+mode = "compile"
+hint = """
+Vectors in rust make use of generics to create dynamically sized arrays of any type.
+You need to tell the compiler what type we are pushing onto this vector."""
+
+[[exercises]]
+name = "generics2"
+path = "exercises/generics/generics2.rs"
+mode = "test"
+hint = """
+Currently we are wrapping only values of type 'u32'.
+Maybe we could update the explicit references to this data type somehow?
+
+If you are still stuck https://doc.rust-lang.org/stable/book/ch10-01-syntax.html#in-method-definitions
+"""
+
+[[exercises]]
+name = "generics3"
+path = "exercises/generics/generics3.rs"
+mode = "test"
+hint = """
+To find the best solution to this challenge you're going to need to think back to your
+knowledge of traits, specifically Trait Bound Syntax -  you may also need this: "use std::fmt::Display;"
+
+This is definitely harder than the last two exercises! You need to think about not only making the
+ReportCard struct generic, but also the correct property - you will need to change the implementation
+of the struct slightly too...you can do it!
+"""
+
+# OPTIONS
+
+[[exercises]]
+name = "option1"
+path = "exercises/option/option1.rs"
+mode = "compile"
+hint = """
+Hint 1: Check out some functions of Option:
+is_some
+is_none
+unwrap
+
+and:
+pattern matching
+
+Hint 2: There are no sensible defaults for the value of an Array; the values need to be filled before use.
+"""
+
+[[exercises]]
+name = "option2"
+path = "exercises/option/option2.rs"
+mode = "compile"
+hint = """
+check out:
+https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html
+https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html
+
+Remember that Options can be stacked in if let and while let.
+For example: Some(Some(variable)) = variable2
+Also see Option::flatten
+"""
+
+[[exercises]]
+name = "option3"
+path = "exercises/option/option3.rs"
+mode = "compile"
+hint = """
+The compiler says a partial move happened in the `match`
+statement. How can this be avoided? The compiler shows the correction
+needed. After making the correction as suggested by the compiler, do
+read: https://doc.rust-lang.org/std/keyword.ref.html"""
+
+# TRAITS
+
+[[exercises]]
+name = "traits1"
+path = "exercises/traits/traits1.rs"
+mode = "test"
+hint = """
+A discussion about Traits in Rust can be found at:
+https://doc.rust-lang.org/book/ch10-02-traits.html
+"""
+
+[[exercises]]
+name = "traits2"
+path = "exercises/traits/traits2.rs"
+mode = "test"
+hint = """
+Notice how the trait takes ownership of 'self',and returns `Self'.
+Try mutating the incoming string vector.
+
+Vectors provide suitable methods for adding an element at the end. See
+the documentation at: https://doc.rust-lang.org/std/vec/struct.Vec.html"""
+
+# MACROS
+
+[[exercises]]
+name = "macros1"
+path = "exercises/macros/macros1.rs"
+mode = "compile"
+hint = """
+When you call a macro, you need to add something special compared to a
+regular function call. If you're stuck, take a look at what's inside
+`my_macro`."""
+
+[[exercises]]
+name = "macros2"
+path = "exercises/macros/macros2.rs"
+mode = "compile"
+hint = """
+Macros don't quite play by the same rules as the rest of Rust, in terms of
+what's available where.
+
+Unlike other things in Rust, the order of "where you define a macro" versus
+"where you use it" actually matters."""
+
+[[exercises]]
+name = "macros3"
+path = "exercises/macros/macros3.rs"
+mode = "compile"
+hint = """
+In order to use a macro outside of its module, you need to do something
+special to the module to lift the macro out into its parent.
+
+The same trick also works on "extern crate" statements for crates that have
+exported macros, if you've seen any of those around."""
+
+[[exercises]]
+name = "macros4"
+path = "exercises/macros/macros4.rs"
+mode = "compile"
+hint = """
+There's a special trait you can use in a #[derive] attribute to test equality 
+of fields in a struct. Read more on derive macros: 
+https://doc.rust-lang.org/reference/procedural-macros.html#derive-macros"""
+
+# TYPE CONVERSIONS
+
+[[exercises]]
+name = "using_as"
+path = "exercises/conversions/using_as.rs"
+mode = "test"
+hint = """
+Use the `as` operator to cast one of the operands in the last line of the
+`average` function into the expected return type."""
+
+[[exercises]]
+name = "from_into"
+path = "exercises/conversions/from_into.rs"
+mode = "compile"
+hint = """
+Follow the steps provided right before the `From` implementation"""
+
+[[exercises]]
+name = "try_from_into"
+path = "exercises/conversions/try_from_into.rs"
+mode = "test"
+hint = """
+Follow the steps provided right before the `TryFrom` implementation.
+You can also use the example at https://doc.rust-lang.org/std/convert/trait.TryFrom.html
+
+Hint: Is there an implementation of `TryFrom` in the standard library that
+can both do the required integer conversion and check the range of the input?
+
+Another hint: Look at the test cases to see which error variants to return.
+
+Yet another hint: You can use the `map_err` or `or` methods of `Result` to
+convert errors.
+
+Yet another hint: If you would like to propagate errors by using the `?`
+operator in your solution, you might want to look at
+https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html
+
+Challenge: Can you make the `TryFrom` implementations generic over many integer types?"""
