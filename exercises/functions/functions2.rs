@@ -1,5 +1,4 @@
 // functions2.rs
-// Make me compile! Execute `rustlings hint functions4` for hints :)
 
 // This store is having a sale where you can only get 3 Rustbucks off if
 // you get the lucky ticket with the number 1.
