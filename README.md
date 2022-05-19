@@ -20,11 +20,12 @@ It contains 42 exercises, covering the basics of:
 
 # Instructions
 
-1. Fork this repo and clone it locally.
-1. Read through the  [Rust by Example book](https://doc.rust-lang.org/rust-by-example/hello/print.html), the exercises are  based on things there.
+1. Clone this repo locally.
+1. Read through the  [Rust by Example book](https://doc.rust-lang.org/rust-by-example/hello/print.html), the exercises are based on things there.
+1. Follow the original [Getting Started](#getting-started) instructions to install Rustlings.
 1. In the root directory, hit `rustlings watch`.
 1. Complete the exercises! Type `hint` if you need help.
-1. Commit your changes with the solutions.
+1. Save a screenshot of your terminal when all compilation and tests have passed.
 
 # rustlings 🦀❤️
 
