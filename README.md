@@ -1,3 +1,5 @@
+Note: please don't publish the solutions to the exercises!
+
 # Rustlings for the Polkadot Academy Self-Assessment 
 
 This is a curated, shorter version of the original [Rustlings](https://github.com/rust-lang/rustlings/) exercises.
