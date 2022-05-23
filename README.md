@@ -8,7 +8,7 @@ It covers most basic topics to get started with programming with Rust with a cou
 The purpose of this repository is to serve as a faster way to assess your Rust skills in order to be prepared for the Polkadot Blockchain Academy. 
 It does assume that users have experience with Rust and is not meant to test their ability to learn, but rather to refresh on some basic Rust.
 
-It contains 42 exercises, covering the basics of:
+It contains 40 exercises, covering the basics of:
 
 - Variables, primitive types, standard library types
 - Functions, structs and traits
