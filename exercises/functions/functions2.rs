@@ -1,8 +1,5 @@
 // functions2.rs
 
-// This store is having a sale where you can only get 3 Rustbucks off if
-// you get the lucky ticket with the number 1.
-
 // I AM NOT DONE
 
 fn main() {
